@@ -3,8 +3,7 @@ slug: "a1d1"
 type: implementation
 authors: Steve Bate <svc-fep@stevebate.net>
 status: DRAFT
-discussionsTo: https://github.com/steve-bate/fep-a1d1-ap-patch/issues
-dateReceived: 2026-03-19
+discussionsTo: https://github.com/steve-bate/fep-a1d1-activitypub-patch/issues
 ---
 # FEP-a1d1: ActivityPub Patch
 

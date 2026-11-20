@@ -29,9 +29,9 @@ then send an `Update` notification containing the full updated object.
 
 ## The FEP
 
-- Document: <https://github.com/steve-bate/fep-a1d1-ap-patch/blob/main/fep-a1d1.md>
-- Repository: <https://github.com/steve-bate/fep-a1d1-ap-patch>
-- Discussion: <https://github.com/steve-bate/fep-a1d1-ap-patch/issues>
+- Document: <https://github.com/steve-bate/fep-a1d1-activitypub-patch/blob/main/fep-a1d1.md>
+- Repository: <https://github.com/steve-bate/fep-a1d1-activitypub-patch>
+- Discussion: <https://github.com/steve-bate/fep-a1d1-activitypub-patch/issues>
 
 ## License
 
