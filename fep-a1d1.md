@@ -3,9 +3,8 @@ slug: "a1d1"
 type: implementation
 authors: Steve Bate <svc-fep@stevebate.net>
 status: DRAFT
-discussionsTo: https://codeberg.org/steve-bate/fep/issues
+discussionsTo: https://github.com/steve-bate/fep-a1d1-ap-patch/issues
 dateReceived: 2026-03-19
-trackingIssue: https://codeberg.org/fediverse/fep/issues/796
 ---
 # FEP-a1d1: ActivityPub Patch
 
@@ -49,7 +48,7 @@ Based on [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902/), a `Patch`
             },
             {
                 "op": "remove",
-                "path": "/summary",
+                "path": "/summary"
             },
             {
                 "value": "Some new content...",
@@ -60,7 +59,7 @@ Based on [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902/), a `Patch`
                 "value": "Du nouveau contenu...",
                 "path": "/contentMap/fr",
                 "op": "replace"
-            },
+            }
         ]
     },
     "target": "http://object-to-update"
@@ -84,41 +83,7 @@ When a `Patch` activity is posted to the outbox, the server MUST apply authorize
 
 ## JSON-LD Context
 
-```json
-{
-    "@context": [
-        {
-            "@version": 1.1,
-            "fep-a1d1": "https://w3id.org/fep/a1d1#",
-            "Patch": "fep-a1d1:Patch",
-            "PatchOperations": {
-                "@id": "fep-a1d1:PatchOperations",
-                "@context": {
-                    "operations": {
-                        "@id": "fep-a1d1:operations",
-                        "@container": "@list",
-                        "@context": {
-                            "op": "fep-a1d1:op",
-                            "path": "fep-a1d1:path",
-                            "value": { 
-                                "@id": "fep-a1d1:value", 
-                                "@type": "@json"
-                            },
-                            "from": "fep-a1d1:from",
-                            "add": "fep-a1d1:add",
-                            "remove": "fep-a1d1:remove",
-                            "replace": "fep-a1d1:replace",
-                            "move": "fep-a1d1:move",
-                            "copy": "fep-a1d1:copy",
-                            "test": "fep-a1d1:test"
-                        }
-                    }
-                }
-            }
-        }
-    ]
-}
-```
+The normative JSON-LD context is defined in [`fep-a1d1.jsonld`](fep-a1d1.jsonld).
 
 > **NOTE:** The `fep-a1d1:value` term is defined as a JSON-LD `@json` type. For JSON consumers, this will not make a difference but it tells JSON-LD consumers
 that the content is a serialized JSON string (which may itself be JSON-LD). Linked Data applications will typically need to parse this string to retrieve the original JSON content.
