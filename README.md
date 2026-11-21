@@ -1,6 +1,6 @@
 # FEP-a1d1: ActivityPub Patch
 
-**Status:** DRAFT · **Type:** implementation · **Author:** Steve Bate · **Received:** 2026-03-19
+**Status:** DRAFT · **Type:** implementation · **Author:** Steve Bate
 
 ## Overview
 
